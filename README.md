@@ -1,6 +1,10 @@
 # MICCAI2025
 Repository to hold code for the MICCAI 2025 work "X"
 
+### Setup
+Included in the repo is an <code>environment.yml</code> for conda. With conda installed, run <code>conda env create -f environment.yml</code>. 
+It is possible some additional libraries may need to be installed as the VTK Python library requires some sort of C compiler to run. This will be dependent on your existing system setup.
+
 ### To Run
 The main training and evaluation script is held within the <code>main_meta-pinn.py</code> script, containing implementations for the proposed model and neural baselines considered.
 
