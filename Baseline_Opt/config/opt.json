@@ -1,0 +1,29 @@
+{
+  "data": {
+    "dir": "data/registered_5/",
+    "geo": "EC",
+    "segment": 1,
+    "initial_id": 0,
+    "initial_threshold": 0.2,
+    "noise": 0.25,
+    "num_data": 1200,
+    "mask_matrix": "data/registered_5/dataset/mask_matrix.npy",
+    "velocity_field": [0.6, 0.1],
+    "segments": {"EC_AW_DC":{"0": [0,1,6,7], "1":[4,5,10,11], "2":[2,3,8,9], "3":[12,13,14,15,16], "4":[17]}},
+    "sigma_h": 0.6,
+    "sigma_s": 0.1
+
+  },
+  "optimization": {
+    "type": "segment",
+    "segment_mapping": "data/segmentation_mapping.npy",
+    "lower_bound": 0.01,
+    "upper_bound": 1,
+    "max_iter": 100
+  },
+  "output": {
+    "vtk_output_dir": "optimization_baseline_results/",
+    "save_activation_times": true,
+    "save_velocity_field": true
+  }
+}

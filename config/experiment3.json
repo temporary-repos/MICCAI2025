@@ -1,0 +1,69 @@
+{
+  "device": 0,
+  "exp_description":"task_generalize_exp3",
+  "exp_id": 33,
+  "train_stage": 1,
+  "training":{
+    "seed": 0,
+    "lr": 5e-5,
+    "epochs": 8000,
+    "residual_perc": 1,
+    "data_perc": 0.4
+  },
+    "dataset": {
+      "geo_ids": {"EC": 0, "AW": 1, "DC": 2, "pstov1": 3, "pstov2": 4},
+      "task_ids": [0, 1, 2, 3, 4],
+      "single": false,
+       "num_train_maps": 10, 
+       "num_test_maps": 10,
+       "num_val_maps": 5,
+       "initial_threshold": 0.2,
+       "k": 5,
+       "type": "endo"
+    }, 
+    
+    "generalization": {
+      "type": "segment",
+      "geometry": "AW",
+      "segment": {"0": 4, "1": 2, "2": 0, "3": 1, "4": 3}
+    },
+    
+   "network": {
+       "in_dim": 3,
+       "out_dim": 1,
+       "num_layers": 6,
+       "hidden_dim": 20,
+       "activation": "Tanh"
+     },
+     "scar_network": {
+       "in_dim": 3,
+       "out_dim": 1,
+       "num_layers": 6,
+       "hidden_dim": 20,
+       "activation": "Relu"
+     },
+   
+     "encoder": {
+       "out_dim": 128,
+       "init_out_dim": 128,
+       "num_layers": 4,
+       "input_dim": 16,
+       "nf": [
+        1,
+        8,
+        16,
+        32,
+        64,
+        128,
+        128
+      ]
+     },
+
+     "scar":{
+      "num_blocks" : 1,
+      "scar_radius": 1,
+      "sigma_h": 0.6,
+      "sigma_s": 0.1,
+      "steep": 2
+  }
+}
